@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .type {
+    @apply font-semibold capitalize text-center rounded-md m-1 px-3 py-2 w-full cursor-default shadow-md text-black
+  }
+  .link {
+    @apply text-blue-500 cursor-pointer hover:text-blue-700 dark:text-green-500 dark:hover:text-green-700
+  }
+  .text-shadow {
+    text-shadow: 
+    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px #ccc, 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.auth__main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  /* height: 100vh; */
+  width: 100%;
+}
+
+.auth__box-container {
+  background-color: white;
+  border-radius: 2px;
+  /* padding: 20px; */
+  width: 750px;
 }
